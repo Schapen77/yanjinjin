@@ -1,0 +1,102 @@
+[
+    {
+        "name": "调用下次回访时间确认接口",
+        "description": "如果用户表示自己现在不方便打电话，调用这个函数，确认下次回访时间",
+        "parameters": {
+            "properties": {
+                "Timing_of_follow-up": {
+                    "description": "下次回访时间",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "Timing_of_follow-up"
+            ]
+        }
+    },
+    {
+        "name": "调用地址查询接口",
+        "description": "如果用户表示自己不在当地，调用这个函数，查看这个地址周围是否有门店",
+        "parameters": {
+            "properties": {
+                "city": {
+                    "description": "城市名",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "city"
+            ]
+        }
+    },
+    {
+        "name": "联系我别的号码",
+        "description": "如果客户表示需要联系自己别的号码，调用这个函数，确认客户需要联系的号码是哪一个",
+        "parameters": {
+            "properties": {
+                "MobilePhone": {
+                    "description": "手机号码",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "MobilePhone"
+            ]
+        }
+    },
+    {
+        "name": "产品库存",
+        "description": "客户想要在指定门店购买特定产品，调用这个函数，查看特定产品在指定门店是否有库存",
+        "parameters": {
+            "properties": {
+                "Store": {
+                    "description": "门店名",
+                    "type": "string"
+                },
+                "Goods": {
+                    "description": "商品名",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "Store",
+                "Goods"
+            ]
+        }
+    },
+    {
+        "name": "微信号查询接口",
+        "description": "如果用户表示没收到微信邀请，调用这个函数，再次发送加微邀请",
+        "parameters": {
+            "properties": {
+                "wechat_id": {
+                    "description": "微信号",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "wechat_id"
+            ]
+        }
+    },
+    {
+        "name": "地址查询接口",
+        "description": "如果用户询问门店地址，调用这个函数，查看这个地址附近的门店地址",
+        "parameters": {
+            "properties": {
+                "city": {
+                    "description": "城市名",
+                    "type": "string"
+                },
+                "district": {
+                    "description": "区县名",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "city",
+                "district"
+            ]
+        }
+    }
+]

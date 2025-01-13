@@ -1,0 +1,9 @@
+group: tool_call_evaluation
+task:
+  - tool_call
+aggregate_metric_list:
+  - metric: acc
+    aggregation: mean
+    weight_by_size: true
+metadata:
+  version: 1.0

@@ -1,0 +1,9 @@
+group: dialogue_planning_evaluation
+task:
+  - dialogue_planning
+aggregate_metric_list:
+  - metric: acc
+    aggregation: mean
+    weight_by_size: true
+metadata:
+  version: 1.0

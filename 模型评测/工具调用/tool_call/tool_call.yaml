@@ -1,0 +1,127 @@
+task: tool_call
+dataset_name: tool_call_dataset
+include: _common.yaml
+dataset_kwargs:
+  data_files:
+    test: /home/yanjinjin/Datasets/工具/使用工具.json
+    validation: /home/yanjinjin/Datasets/工具/使用工具.json
+description: "请根据系统指令任务及当前对话，继续生成对话。并根据当前对话内容判断是否需要调用工具，如果需要，请正确调用工具，并生成正确的工具参数"
+
+# doc_to_text: "{% for turn in dialogue %}{{ turn.role }}：{{ turn.content }}\n{% endfor %}\n
+# 根据当前对话内容判断是否需要调用工具，如果需要，请正确调用工具，并生成正确的工具参数。
+# 1.如果用户表示没收到微信邀请，请调用 'wechat_id_query'，再次发送加微邀请并生成参数。格式：{ 'tool': 'wechat_id_query', 'arguments': { 'wechat_id': '<微信号>' } }\n
+# 2.如果用户表示自己现在不方便打电话，请调用 'confirm_follow_up_time'，确认下次回访时间。格式：{ 'tool': 'confirm_follow_up_time', 'arguments': { 'Timing_of_follow_up': '<下次回访时间>' } }\n
+# 3.如果用户表示自己不在当地，请调用 'non_local_store_query'，查看地址周围是否有门店并生成参数。格式：{ 'tool': 'non_local_store_query', 'arguments': { 'city': '<城市名>' } }\n
+# 4.如果客户表示需要联系别的号码，请调用 'contact_other_number'，确认客户需要联系的号码是哪一个并生成参数。格式：{ 'tool': 'contact_other_number', 'arguments': { 'MobilePhone': '<手机号码>' } }\n
+# 5.如果客户想在指定门店购买特定产品，请调用 'product_inventory'，查看特定产品在指定门店是否有库存并生成参数。格式：{ 'tool': 'product_inventory', 'arguments': { 'Store': '<门店名>', 'Goods': '<商品名>' } }\n
+# 6.如果用户询问门店地址，请调用 'address_query'，查看地址附近的门店地址并生成参数。格式：{ 'tool': 'address_query', 'arguments': { 'city': '<城市名>', 'district': '<区县名>' } }"
+
+doc_to_text: "{% for turn in dialogue %}{{ turn.role }}：{{ turn.content }}\n{% endfor %}\n
+根据当前对话内容判断是否需要调用工具，如果需要，请正确调用工具，并生成正确的工具参数。\n
+## Tools\n 以下是你可以使用的工具列表：
+
+### 确认下次回访时间
+confirm_follow_up_time: 如果用户表示自己现在不方便打电话，调用这个工具，确认下次回访时间。 
+参数: 1. `Timing_of_follow_up` 下次回访时间，字符串格式。
+
+### 非本地地址查询
+non_local_store_query: 如果用户表示自己不在当地，调用这个工具，查看这个地址周围是否有门店。 
+参数: 1. `city`: 城市名，字符串格式。
+
+### 联系其他号码
+contact_other_number: 如果客户表示需要联系自己别的号码，调用这个工具，确认客户需要联系的号码是哪一个。 
+参数: 1. `MobilePhone`: 手机号码，字符串格式。
+
+### 产品库存查询
+product_inventory: 客户想要在指定门店购买特定产品，调用这个工具，查看特定产品在指定门店是否有库存。 
+参数: 1. `Store`: 门店名，字符串格式。2. `Goods`: 商品名，字符串格式。
+
+### 微信号查询
+wechat_id_query: 如果用户表示没收到微信邀请，调用这个工具，再次发送加微邀请。 
+参数: 1. `wechat_id`: 微信号，字符串格式。
+
+### 门店地址查询
+address_query: 如果用户询问门店地址，调用这个函数，查看这个地址附近的门店地址。
+参数: 1. `city`: 城市名，字符串格式。2. `district`: 区县名，字符串格式。
+
+### 产品是否参加活动
+product_query: 如果客户询问某个产品是否参与该活动，调用这个工具，查找该产品是否参与客服推荐的活动。 
+参数: 1. `product_name` 产品名称，字符串格式。
+
+### 用户下次方便参加活动的时间
+confirm_other_activity_time: 如果用户表示现在不方便参加活动，能否在其他某个时间参加，调用这个工具，查看此时间下活动是否有效。
+参数: 1. `convenient_time` 方便参加活动的时间，字符串格式。
+
+### 线下门店售后
+after_sales_store_address_confirmation: 如果用户反馈线下门店售后问题，调用这个工具，确定相关门店解决问题。
+参数: 1. `store_address` 门店地址，字符串格式。
+
+### 商品折扣查询
+discount_amount: 如果客户询问商品折扣多少，调用这个工具，查看这个商品可以有多少折扣。
+参数: 1. `commodity` 商品，字符串格式。
+
+### 产品效果查询
+product_effect: 如果客户询问产品效果怎么样，调用这个工具，查看这个商品功效。
+参数: 1. `commodity` 商品，字符串格式。
+
+### 机构人员资质查询
+staff_qualifications: 如果客户询问机构工作人员资质，调用这个工具，查看机构工作人员资质并反馈。
+参数: 1. `staff` 工作人员，字符串格式。
+
+### 联系门店经理
+store_manager: 如果客户表示工作人员态度不好，调用这个工具，查找该门店经理并表示让其联系解决。
+参数: 1. `store_address` 门店地址，字符串格式。
+
+### 联系其他微信号
+customer_other_wechat_id: 如果客户表示手机号不是微信号，调用这个工具，对客户提供的其他微信号发送添加邀请。 
+参数: 1. `wechat_id`: 微信号，字符串格式。
+
+## 当你需要调用某个工具时，请在回复中插入以下命令，可以根据需要调用零次或多次：
+✿FUNCTION✿: 使用的工具，应该是 [confirm_follow_up_time, non_local_address_query, contact_other_number, product_inventory, wechat_id_query, address_query,
+product_query, confirm_other_activity_time, after_sales_store_address_confirmation, discount_amount,
+product_effect, staff_qualifications, store_manager, customer_other_wechat_id] 中的一个。
+✿ARGS✿: 工具的输入参数，格式参考：{'product_name': 'C16'}。
+✿RESULT✿: 工具返回的结果.
+✿RETURN✿: 基于工具结果的回复。"
+
+
+# doc_to_text: "{% for turn in dialogue %}{{ turn.role }}：{{ turn.content }}\n{% endfor %}\n
+# 根据当前对话内容判断是否需要调用工具，如果需要，请正确调用工具，并生成正确的工具参数。\n
+
+# 以下是你可以使用的工具列表：
+
+# confirm_follow_up_time: Call this tool to interact with the 确认下次回访时间 API.
+# What is the 确认下次回访时间 API useful for? 如果用户表示自己现在不方便打电话，调用这个工具，确认下次回访时间。 
+# Parameters: 1. `Timing_of_follow_up` 下次回访时间，字符串格式。
+
+# non_local_store_query: Call this tool to interact with the 非本地地址查询 API.
+# What is the 非本地地址查询 API useful for? 如果用户表示自己不在当地，调用这个工具，查看这个地址周围是否有门店。 
+# Parameters: 1. `city`: 城市名，字符串格式。
+
+# contact_other_number: Call this tool to interact with the 联系其他号码 API.
+# What is the 联系其他号码 API useful for? 如果客户表示需要联系自己别的号码，调用这个工具，确认客户需要联系的号码是哪一个。
+# Parameters: 1. `MobilePhone`: 手机号码，字符串格式。
+
+# product_inventory: Call this tool to interact with the 产品库存查询 API.
+# What is the 产品库存查询 API useful for? 如果客户想要在指定门店购买特定产品，调用这个工具，查看特定产品在指定门店是否有库存。
+# Parameters: 1. `Store`: 门店名，字符串格式。2. `Goods`: 商品名，字符串格式。
+
+# wechat_id_query: Call this tool to interact with the 微信号查询 API.
+# What is the 微信号查询 API useful for? 如果用户表示没收到微信邀请，调用这个工具，再次发送加微邀请。
+# Parameters: 1. `wechat_id`: 微信号，字符串格式。
+
+# address_query: Call this tool to interact with the 门店地址查询 API.
+# What is the 门店地址查询 API useful for? 如果用户询问门店地址，调用这个工具，查看这个地址附近的门店地址。
+# Parameters: 1. `city`: 城市名，字符串格式。2. `district`: 区县名，字符串格式。
+
+# Use the following format:
+
+# Question: the input question you must answer
+# Action: the tool to use, format:{'tool': 'address_query'}
+# Action Input: arguments passed to the tool, format:{'arguments': { 'city': '<城市名>', 'district': '<区县名>' }}
+# Observation: the result of the action
+# (this Thought/Action/Action Input/Observation can be repeated zero or more times)
+# Final Answer: the final answer to the original input question"
+
+doc_to_target: ""
+process_results: !function utils.process_tool_call_results

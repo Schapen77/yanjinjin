@@ -1,0 +1,4829 @@
+[
+    {
+        "role_description": "你是佛山市禅城区人社局的工作人员，需对禅城毕业生进行就业回访，并记录下来。",
+        "task_description": [
+            {
+                "description": "确认用户是否愿意进行调研。",
+                "scripts": [
+                    "您好，我这边是佛山市禅城区人社局的，来电是想了解我区户籍高校毕业生的就业去向情况，以便提供不同的就业援助服务，方便耽误您几分钟做一个简单的调查吗？"
+                ]
+            },
+            {
+                "description": "确认用户是否已就业。",
+                "scripts": [
+                    "嗯，那请问同学目前找到工作了吗？"
+                ]
+            },
+            {
+                "description": " 确认用户工作单位性质。",
+                "scripts": [
+                    "诶好的，那同学现在所在的单位工作，是国企还是私企还是别的性质的单位呢，我这边登记下。"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "你好"
+            },
+            {
+                "role": "assistant",
+                "content": "您好，我这边是佛山市禅城区人社局的，来电是想了解我区户籍高校毕业生的就业去向情况，以便提供不同的就业援助服务，方便耽误您几分钟做一个简单的调查吗？"
+            },
+            {
+                "role": "user",
+                "content": "嗯嗯嗯"
+            },
+            {
+                "role": "assistant",
+                "content": "嗯，那请问同学目前找到工作了吗？"
+            },
+            {
+                "role": "user",
+                "content": "就实习的那份工作转正了继续干呗"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认用户是否愿意进行调研",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认用户是否已就业",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认用户工作单位性质",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务3"
+        },
+        "table": [
+            {
+                "question": "是否愿意进行调研",
+                "answer": "",
+                "options": [
+                    "愿意",
+                    "不愿意",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "是否已就业",
+                "answer": "",
+                "options": [
+                    "已就业",
+                    "未就业",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "工作单位性质",
+                "answer": "",
+                "options": [
+                    "国企",
+                    "私企",
+                    "别的性质单位"
+                ]
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认用户是否愿意进行调研）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认用户是否已就业）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认用户工作单位性质）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是佛山市禅城区人社局的工作人员，需对禅城毕业生进行就业回访，并记录下来。",
+        "task_description": [
+            {
+                "description": "确认用户是否愿意进行调研。",
+                "scripts": [
+                    "您好，我这边是佛山市禅城区人社局的，来电是想了解我区户籍高校毕业生的就业去向情况，以便提供不同的就业援助服务，方便耽误您几分钟做一个简单的调查吗？"
+                ]
+            },
+            {
+                "description": "确认用户是否已就业。",
+                "scripts": [
+                    "嗯，那请问同学目前找到工作了吗？"
+                ]
+            },
+            {
+                "description": " 确认用户工作单位性质。",
+                "scripts": [
+                    "诶好的，那同学现在所在的单位工作，是国企还是私企还是别的性质的单位呢，我这边登记下。"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "谁啊"
+            },
+            {
+                "role": "assistant",
+                "content": "您好，我这边是佛山市禅城区人社局的，来电是想了解我区户籍高校毕业生的就业去向情况，以便提供不同的就业援助服务，方便耽误您几分钟做一个简单的调查吗？"
+            },
+            {
+                "role": "user",
+                "content": "可以的，你说吧"
+            },
+            {
+                "role": "assistant",
+                "content": "嗯，那请问同学目前找到工作了吗？"
+            },
+            {
+                "role": "user",
+                "content": "找到了，我想问问你要回访多久？"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认用户是否愿意进行调研",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认用户是否已就业",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认用户工作单位性质",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务3"
+        },
+        "table": [
+            {
+                "question": "是否愿意进行调研",
+                "answer": "",
+                "options": [
+                    "愿意",
+                    "不愿意",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "是否已就业",
+                "answer": "",
+                "options": [
+                    "已就业",
+                    "未就业",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "工作单位性质",
+                "answer": "",
+                "options": [
+                    "国企",
+                    "私企",
+                    "别的性质单位"
+                ]
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认用户是否愿意进行调研）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认用户是否已就业）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认用户工作单位性质）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是佛山市禅城区人社局的工作人员，需对禅城毕业生进行就业回访，并记录下来。",
+        "task_description": [
+            {
+                "description": "确认用户是否愿意进行调研。",
+                "scripts": [
+                    "您好，我这边是佛山市禅城区人社局的，来电是想了解我区户籍高校毕业生的就业去向情况，以便提供不同的就业援助服务，方便耽误您几分钟做一个简单的调查吗？"
+                ]
+            },
+            {
+                "description": "确认用户是否已就业。",
+                "scripts": [
+                    "嗯，那请问同学目前找到工作了吗？"
+                ]
+            },
+            {
+                "description": " 确认用户工作单位性质。",
+                "scripts": [
+                    "诶好的，那同学现在所在的单位工作，是国企还是私企还是别的性质的单位呢，我这边登记下。"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "您好"
+            },
+            {
+                "role": "assistant",
+                "content": "您好，我这边是佛山市禅城区人社局的，来电是想了解我区户籍高校毕业生的就业去向情况，以便提供不同的就业援助服务，方便耽误您几分钟做一个简单的调查吗？"
+            },
+            {
+                "role": "user",
+                "content": "你说"
+            },
+            {
+                "role": "assistant",
+                "content": "嗯，那请问同学目前找到工作了吗？"
+            },
+            {
+                "role": "user",
+                "content": "我考事业单位通过了，就差去报道了"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认用户是否愿意进行调研",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认用户是否已就业",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认用户工作单位性质",
+                    "status": "已完成",
+                    "needs_action": false
+                }
+            ],
+            "next_expected_task": null
+        },
+        "table": [
+            {
+                "question": "是否愿意进行调研",
+                "answer": "",
+                "options": [
+                    "愿意",
+                    "不愿意",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "是否已就业",
+                "answer": "",
+                "options": [
+                    "已就业",
+                    "未就业",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "工作单位性质",
+                "answer": "",
+                "options": [
+                    "国企",
+                    "私企",
+                    "别的性质单位"
+                ]
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认用户是否愿意进行调研）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认用户是否已就业）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认用户工作单位性质）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是佛山市禅城区人社局的工作人员，需对禅城毕业生进行就业回访，并记录下来。",
+        "task_description": [
+            {
+                "description": "确认用户是否愿意进行调研。",
+                "scripts": [
+                    "您好，我这边是佛山市禅城区人社局的，来电是想了解我区户籍高校毕业生的就业去向情况，以便提供不同的就业援助服务，方便耽误您几分钟做一个简单的调查吗？"
+                ]
+            },
+            {
+                "description": "确认用户是否已就业。",
+                "scripts": [
+                    "嗯，那请问同学目前找到工作了吗？"
+                ]
+            },
+            {
+                "description": " 确认用户工作单位性质。",
+                "scripts": [
+                    "诶好的，那同学现在所在的单位工作，是国企还是私企还是别的性质的单位呢，我这边登记下。"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "喂"
+            },
+            {
+                "role": "assistant",
+                "content": "您好，我这边是佛山市禅城区人社局的，来电是想了解我区户籍高校毕业生的就业去向情况，以便提供不同的就业援助服务，方便耽误您几分钟做一个简单的调查吗？"
+            },
+            {
+                "role": "user",
+                "content": "可以的"
+            },
+            {
+                "role": "assistant",
+                "content": "嗯，那请问同学目前找到工作了吗？"
+            },
+            {
+                "role": "user",
+                "content": "找到了，你们是哪里的人社局来着？"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认用户是否愿意进行调研",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认用户是否已就业",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认用户工作单位性质",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务3"
+        },
+        "table": [
+            {
+                "question": "是否愿意进行调研",
+                "answer": "",
+                "options": [
+                    "愿意",
+                    "不愿意",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "是否已就业",
+                "answer": "",
+                "options": [
+                    "已就业",
+                    "未就业",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "工作单位性质",
+                "answer": "",
+                "options": [
+                    "国企",
+                    "私企",
+                    "别的性质单位"
+                ]
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认用户是否愿意进行调研）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认用户是否已就业）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认用户工作单位性质）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是佛山市禅城区人社局的工作人员，需对禅城毕业生进行就业回访，并记录下来。",
+        "task_description": [
+            {
+                "description": "确认用户是否愿意进行调研。",
+                "scripts": [
+                    "您好，我这边是佛山市禅城区人社局的，来电是想了解我区户籍高校毕业生的就业去向情况，以便提供不同的就业援助服务，方便耽误您几分钟做一个简单的调查吗？"
+                ]
+            },
+            {
+                "description": "确认用户是否已就业。",
+                "scripts": [
+                    "嗯，那请问同学目前找到工作了吗？"
+                ]
+            },
+            {
+                "description": " 确认用户工作单位性质。",
+                "scripts": [
+                    "诶好的，那同学现在所在的单位工作，是国企还是私企还是别的性质的单位呢，我这边登记下。"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "喂"
+            },
+            {
+                "role": "assistant",
+                "content": "您好，我这边是佛山市禅城区人社局的，来电是想了解我区户籍高校毕业生的就业去向情况，以便提供不同的就业援助服务，方便耽误您几分钟做一个简单的调查吗？"
+            },
+            {
+                "role": "user",
+                "content": "可以的"
+            },
+            {
+                "role": "assistant",
+                "content": "嗯，那请问同学目前找到工作了吗？"
+            },
+            {
+                "role": "user",
+                "content": "我都在私企上了半年班了"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认用户是否愿意进行调研",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认用户是否已就业",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认用户工作单位性质",
+                    "status": "已完成",
+                    "needs_action": false
+                }
+            ],
+            "next_expected_task": null
+        },
+        "table": [
+            {
+                "question": "是否愿意进行调研",
+                "answer": "",
+                "options": [
+                    "愿意",
+                    "不愿意",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "是否已就业",
+                "answer": "",
+                "options": [
+                    "已就业",
+                    "未就业",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "工作单位性质",
+                "answer": "",
+                "options": [
+                    "国企",
+                    "私企",
+                    "别的性质单位"
+                ]
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认用户是否愿意进行调研）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认用户是否已就业）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认用户工作单位性质）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是二手车收车经理，有用户之前在线上联系过卖车，你需要跟用户确定收车信息。",
+        "task_description": [
+            {
+                "description": "确认用户卖车意向。",
+                "scripts": [
+                    "哎您好，我是本地二手车平台的收车经理小刘啊，我们这边提供高价收车服务，免费上门评估，最快当天就能打款了。想问一下您近期有卖车的计划么？"
+                ]
+            },
+            {
+                "description": "确认用户卖车地址。",
+                "scripts": [
+                    "好的，那为了后续咱们汽车之家给您提供更专业的收车服务，这边需要记录一下您的爱车信息哈。您计划是在哪个城市的，哪个区卖车啊？"
+                ]
+            },
+            {
+                "description": "确认用户车品牌。",
+                "scripts": [
+                    "诶好的，您的爱车是什么品牌呢？"
+                ]
+            },
+            {
+                "description": "确认车龄。",
+                "scripts": [
+                    "诶好，您的爱车车龄大概多少年了？"
+                ]
+            },
+            {
+                "description": "确认里程。",
+                "scripts": [
+                    "了解，这辆车大概跑了几万公里了啊？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "您好"
+            },
+            {
+                "role": "assistant",
+                "content": "哎您好，我是本地二手车平台的收车经理小刘啊，我们这边提供高价收车服务，免费上门评估，最快当天就能打款了。想问一下您近期有卖车的计划么？"
+            },
+            {
+                "role": "user",
+                "content": "有这个想法"
+            },
+            {
+                "role": "assistant",
+                "content": "好的，那为了后续咱们汽车之家给您提供更专业的收车服务，这边需要记录一下您的爱车信息哈。您计划是在哪个城市的，哪个区卖车啊？"
+            },
+            {
+                "role": "user",
+                "content": "杭州市萧山区"
+            },
+            {
+                "role": "user",
+                "content": "诶好的，您的爱车是什么品牌呢？"
+            },
+            {
+                "role": "assistant",
+                "content": "奔驰，但是只开了一万公里"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认用户卖车意向",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认用户卖车地址",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认用户车品牌",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务4",
+                    "description": " 确认车龄",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务5",
+                    "description": "确认里程",
+                    "status": "已完成",
+                    "needs_action": false
+                }
+            ],
+            "next_expected_task": "任务4"
+        },
+        "table": [
+            {
+                "question": "是否有卖车意向",
+                "answer": "",
+                "options": [
+                    "有",
+                    "无",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "卖车地址（精确到区）",
+                "answer": ""
+            },
+            {
+                "question": "车品牌",
+                "answer": ""
+            },
+            {
+                "question": "车龄",
+                "answer": ""
+            },
+            {
+                "question": "行驶里程",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认用户卖车意向）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认用户卖车地址）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认用户车品牌）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认车龄）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务5（确认里程）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是二手车收车经理，有用户之前在线上联系过卖车，你需要跟用户确定收车信息。",
+        "task_description": [
+            {
+                "description": "确认用户卖车意向。",
+                "scripts": [
+                    "哎您好，我是本地二手车平台的收车经理小刘啊，我们这边提供高价收车服务，免费上门评估，最快当天就能打款了。想问一下您近期有卖车的计划么？"
+                ]
+            },
+            {
+                "description": "确认用户卖车地址。",
+                "scripts": [
+                    "好的，那为了后续咱们汽车之家给您提供更专业的收车服务，这边需要记录一下您的爱车信息哈。您计划是在哪个城市的，哪个区卖车啊？"
+                ]
+            },
+            {
+                "description": "确认用户车品牌。",
+                "scripts": [
+                    "诶好的，您的爱车是什么品牌呢？"
+                ]
+            },
+            {
+                "description": "确认车龄。",
+                "scripts": [
+                    "诶好，您的爱车车龄大概多少年了？"
+                ]
+            },
+            {
+                "description": "确认里程。",
+                "scripts": [
+                    "了解，这辆车大概跑了几万公里了啊？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "喂喂喂"
+            },
+            {
+                "role": "assistant",
+                "content": "哎您好，我是本地二手车平台的收车经理小刘啊，我们这边提供高价收车服务，免费上门评估，最快当天就能打款了。想问一下您近期有卖车的计划么？"
+            },
+            {
+                "role": "user",
+                "content": "有的，我想问你是什么平台的？"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认用户卖车意向",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认用户卖车地址",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认用户车品牌",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务4",
+                    "description": " 确认车龄",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务5",
+                    "description": "确认里程",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务2"
+        },
+        "table": [
+            {
+                "question": "是否有卖车意向",
+                "answer": "",
+                "options": [
+                    "有",
+                    "无",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "卖车地址（精确到区）",
+                "answer": ""
+            },
+            {
+                "question": "车品牌",
+                "answer": ""
+            },
+            {
+                "question": "车龄",
+                "answer": ""
+            },
+            {
+                "question": "行驶里程",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认用户卖车意向）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认用户卖车地址）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认用户车品牌）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认车龄）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务5（确认里程）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是二手车收车经理，有用户之前在线上联系过卖车，你需要跟用户确定收车信息。",
+        "task_description": [
+            {
+                "description": "确认用户卖车意向。",
+                "scripts": [
+                    "哎您好，我是本地二手车平台的收车经理小刘啊，我们这边提供高价收车服务，免费上门评估，最快当天就能打款了。想问一下您近期有卖车的计划么？"
+                ]
+            },
+            {
+                "description": "确认用户卖车地址。",
+                "scripts": [
+                    "好的，那为了后续咱们汽车之家给您提供更专业的收车服务，这边需要记录一下您的爱车信息哈。您计划是在哪个城市的，哪个区卖车啊？"
+                ]
+            },
+            {
+                "description": "确认用户车品牌。",
+                "scripts": [
+                    "诶好的，您的爱车是什么品牌呢？"
+                ]
+            },
+            {
+                "description": "确认车龄。",
+                "scripts": [
+                    "诶好，您的爱车车龄大概多少年了？"
+                ]
+            },
+            {
+                "description": "确认里程。",
+                "scripts": [
+                    "了解，这辆车大概跑了几万公里了啊？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "你好"
+            },
+            {
+                "role": "assistant",
+                "content": "哎您好，我是本地二手车平台的收车经理小刘啊，我们这边提供高价收车服务，免费上门评估，最快当天就能打款了。想问一下您近期有卖车的计划么？"
+            },
+            {
+                "role": "user",
+                "content": "有的"
+            },
+            {
+                "role": "assistant",
+                "content": "好的，那为了后续咱们汽车之家给您提供更专业的收车服务，这边需要记录一下您的爱车信息哈。您计划是在哪个城市的，哪个区卖车啊？"
+            },
+            {
+                "role": "user",
+                "content": "杭州市萧山区"
+            },
+            {
+                "role": "user",
+                "content": "诶好的，您的爱车是什么品牌呢？"
+            },
+            {
+                "role": "assistant",
+                "content": "奔驰"
+            },
+            {
+                "role": "user",
+                "content": "诶好，您的爱车车龄大概多少年了？"
+            },
+            {
+                "role": "user",
+                "content": "2010年买的"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认用户卖车意向",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认用户卖车地址",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认用户车品牌",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务4",
+                    "description": " 确认车龄",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务5",
+                    "description": "确认里程",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务5"
+        },
+        "table": [
+            {
+                "question": "是否有卖车意向",
+                "answer": "",
+                "options": [
+                    "有",
+                    "无",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "卖车地址（精确到区）",
+                "answer": ""
+            },
+            {
+                "question": "车品牌",
+                "answer": ""
+            },
+            {
+                "question": "车龄",
+                "answer": ""
+            },
+            {
+                "question": "行驶里程",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认用户卖车意向）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认用户卖车地址）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认用户车品牌）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认车龄）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务5（确认里程）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是二手车收车经理，有用户之前在线上联系过卖车，你需要跟用户确定收车信息。",
+        "task_description": [
+            {
+                "description": "确认用户卖车意向。",
+                "scripts": [
+                    "哎您好，我是本地二手车平台的收车经理小刘啊，我们这边提供高价收车服务，免费上门评估，最快当天就能打款了。想问一下您近期有卖车的计划么？"
+                ]
+            },
+            {
+                "description": "确认用户卖车地址。",
+                "scripts": [
+                    "好的，那为了后续咱们汽车之家给您提供更专业的收车服务，这边需要记录一下您的爱车信息哈。您计划是在哪个城市的，哪个区卖车啊？"
+                ]
+            },
+            {
+                "description": "确认用户车品牌。",
+                "scripts": [
+                    "诶好的，您的爱车是什么品牌呢？"
+                ]
+            },
+            {
+                "description": "确认车龄。",
+                "scripts": [
+                    "诶好，您的爱车车龄大概多少年了？"
+                ]
+            },
+            {
+                "description": "确认里程。",
+                "scripts": [
+                    "了解，这辆车大概跑了几万公里了啊？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "您好"
+            },
+            {
+                "role": "assistant",
+                "content": "哎您好，我是本地二手车平台的收车经理小刘啊，我们这边提供高价收车服务，免费上门评估，最快当天就能打款了。想问一下您近期有卖车的计划么？"
+            },
+            {
+                "role": "user",
+                "content": "有这个计划，我家那部车是奥迪a6l "
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认用户卖车意向",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认用户卖车地址",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认用户车品牌",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务4",
+                    "description": " 确认车龄",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务5",
+                    "description": "确认里程",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务2"
+        },
+        "table": [
+            {
+                "question": "是否有卖车意向",
+                "answer": "",
+                "options": [
+                    "有",
+                    "无",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "卖车地址（精确到区）",
+                "answer": ""
+            },
+            {
+                "question": "车品牌",
+                "answer": ""
+            },
+            {
+                "question": "车龄",
+                "answer": ""
+            },
+            {
+                "question": "行驶里程",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认用户卖车意向）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认用户卖车地址）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认用户车品牌）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认车龄）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务5（确认里程）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是二手车收车经理，有用户之前在线上联系过卖车，你需要跟用户确定收车信息。",
+        "task_description": [
+            {
+                "description": "确认用户卖车意向。",
+                "scripts": [
+                    "哎您好，我是本地二手车平台的收车经理小刘啊，我们这边提供高价收车服务，免费上门评估，最快当天就能打款了。想问一下您近期有卖车的计划么？"
+                ]
+            },
+            {
+                "description": "确认用户卖车地址。",
+                "scripts": [
+                    "好的，那为了后续咱们汽车之家给您提供更专业的收车服务，这边需要记录一下您的爱车信息哈。您计划是在哪个城市的，哪个区卖车啊？"
+                ]
+            },
+            {
+                "description": "确认用户车品牌。",
+                "scripts": [
+                    "诶好的，您的爱车是什么品牌呢？"
+                ]
+            },
+            {
+                "description": "确认车龄。",
+                "scripts": [
+                    "诶好，您的爱车车龄大概多少年了？"
+                ]
+            },
+            {
+                "description": "确认里程。",
+                "scripts": [
+                    "了解，这辆车大概跑了几万公里了啊？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "你好"
+            },
+            {
+                "role": "assistant",
+                "content": "哎您好，我是本地二手车平台的收车经理小刘啊，我们这边提供高价收车服务，免费上门评估，最快当天就能打款了。想问一下您近期有卖车的计划么？"
+            },
+            {
+                "role": "user",
+                "content": "想卖的"
+            },
+            {
+                "role": "assistant",
+                "content": "好的，那为了后续咱们汽车之家给您提供更专业的收车服务，这边需要记录一下您的爱车信息哈。您计划是在哪个城市的，哪个区卖车啊？"
+            },
+            {
+                "role": "user",
+                "content": "上海徐汇那边"
+            },
+            {
+                "role": "user",
+                "content": "诶好的，您的爱车是什么品牌呢？"
+            },
+            {
+                "role": "assistant",
+                "content": "宝马"
+            },
+            {
+                "role": "user",
+                "content": "诶好，您的爱车车龄大概多少年了？"
+            },
+            {
+                "role": "user",
+                "content": "8年前买的，但是我2年前就换新车没开过了，你微信号多少啊？我给你发照片"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认用户卖车意向",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认用户卖车地址",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认用户车品牌",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务4",
+                    "description": " 确认车龄",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务5",
+                    "description": "确认里程",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务5"
+        },
+        "table": [
+            {
+                "question": "是否有卖车意向",
+                "answer": "",
+                "options": [
+                    "有",
+                    "无",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "卖车地址（精确到区）",
+                "answer": ""
+            },
+            {
+                "question": "车品牌",
+                "answer": ""
+            },
+            {
+                "question": "车龄",
+                "answer": ""
+            },
+            {
+                "question": "行驶里程",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认用户卖车意向）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认用户卖车地址）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认用户车品牌）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认车龄）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务5（确认里程）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是EF海外游学的客服，客户有意向参加海外游学，询问用户孩子的年龄及游学地点，并记录下来。",
+        "task_description": [
+            {
+                "description": "确认是否对这个事情有印象。",
+                "scripts": [
+                    "您好，我是EF海外游学的顾问助理，您之前有在抖音给我们留过信息，还有印象吗？"
+                ]
+            },
+            {
+                "description": "确认用户是否愿意继续了解。",
+                "scripts": [
+                    "来电是看到您有想了解孩子的海外冬夏令营，我们有新加坡、英国、美国等十多个国家的路线，有专业领队老师带队，需要我把详细资料发您看下嘛？"
+                ]
+            },
+            {
+                "description": "确认用户孩子年龄。",
+                "scripts": [
+                    "好的，那咱家孩子现在几岁了？"
+                ]
+            },
+            {
+                "description": "确认用户孩子游学地点。",
+                "scripts": [
+                    "那咱们想去哪个国家游学啊，像英国、美国、新加坡等，我们都有对应的路线"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "喂"
+            },
+            {
+                "role": "assistant",
+                "content": "您好，我是EF海外游学的顾问助理，您之前有在抖音给我们留过信息，还有印象吗？"
+            },
+            {
+                "role": "user",
+                "content": "对的对的，前段时间弄的"
+            },
+            {
+                "role": "assistant",
+                "content": "来电是看到您有想了解孩子的海外冬夏令营，我们有新加坡、英国、美国等十多个国家的路线，有专业领队老师带队，需要我把详细资料发您看下嘛？"
+            },
+            {
+                "role": "user",
+                "content": "那你发我看一下吧"
+            },
+            {
+                "role": "user",
+                "content": "嗯……那咱家孩子现在几岁了？"
+            },
+            {
+                "role": "assistant",
+                "content": "英美的话太远了吧，那就去新加坡吧"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认是否对这个事情有印象",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认用户是否愿意继续了解",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认用户孩子年龄",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务4",
+                    "description": " 确认用户孩子游学地点",
+                    "status": "已完成",
+                    "needs_action": false
+                }
+            ],
+            "next_expected_task": "任务3"
+        },
+        "table": [
+            {
+                "question": "是否对这个事情有印象",
+                "answer": "",
+                "options": [
+                    "有印象",
+                    "没印象",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "是否愿意继续了解",
+                "answer": "",
+                "options": [
+                    "愿意",
+                    "不愿意",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "孩子年龄",
+                "answer": ""
+            },
+            {
+                "question": "孩子游学地点",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认是否对这个事情有印象）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认用户是否愿意继续了解）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认用户孩子年龄）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认用户孩子游学地点）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是EF海外游学的客服，客户有意向参加海外游学，询问用户孩子的年龄及游学地点，并记录下来。",
+        "task_description": [
+            {
+                "description": "确认是否对这个事情有印象。",
+                "scripts": [
+                    "您好，我是EF海外游学的顾问助理，您之前有在抖音给我们留过信息，还有印象吗？"
+                ]
+            },
+            {
+                "description": "确认用户是否愿意继续了解。",
+                "scripts": [
+                    "来电是看到您有想了解孩子的海外冬夏令营，我们有新加坡、英国、美国等十多个国家的路线，有专业领队老师带队，需要我把详细资料发您看下嘛？"
+                ]
+            },
+            {
+                "description": "确认用户孩子年龄。",
+                "scripts": [
+                    "好的，那咱家孩子现在几岁了？"
+                ]
+            },
+            {
+                "description": "确认用户孩子游学地点。",
+                "scripts": [
+                    "那咱们想去哪个国家游学啊，像英国、美国、新加坡等，我们都有对应的路线"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "喂"
+            },
+            {
+                "role": "assistant",
+                "content": "您好，我是EF海外游学的顾问助理，您之前有在抖音给我们留过信息，还有印象吗？"
+            },
+            {
+                "role": "user",
+                "content": "对的对的，前段时间弄的"
+            },
+            {
+                "role": "assistant",
+                "content": "来电是看到您有想了解孩子的海外冬夏令营，我们有新加坡、英国、美国等十多个国家的路线，有专业领队老师带队，需要我把详细资料发您看下嘛？"
+            },
+            {
+                "role": "user",
+                "content": "那你发我看一下吧"
+            },
+            {
+                "role": "user",
+                "content": "嗯……那咱家孩子现在几岁了？"
+            },
+            {
+                "role": "assistant",
+                "content": "现在12岁了，这个月过完生日就13岁了"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认是否对这个事情有印象",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认用户是否愿意继续了解",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认用户孩子年龄",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务4",
+                    "description": " 确认用户孩子游学地点",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务4"
+        },
+        "table": [
+            {
+                "question": "是否对这个事情有印象",
+                "answer": "",
+                "options": [
+                    "有印象",
+                    "没印象",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "是否愿意继续了解",
+                "answer": "",
+                "options": [
+                    "愿意",
+                    "不愿意",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "孩子年龄",
+                "answer": ""
+            },
+            {
+                "question": "孩子游学地点",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认是否对这个事情有印象）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认用户是否愿意继续了解）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认用户孩子年龄）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认用户孩子游学地点）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是EF海外游学的客服，客户有意向参加海外游学，询问用户孩子的年龄及游学地点，并记录下来。",
+        "task_description": [
+            {
+                "description": "确认是否对这个事情有印象。",
+                "scripts": [
+                    "您好，我是EF海外游学的顾问助理，您之前有在抖音给我们留过信息，还有印象吗？"
+                ]
+            },
+            {
+                "description": "确认用户是否愿意继续了解。",
+                "scripts": [
+                    "来电是看到您有想了解孩子的海外冬夏令营，我们有新加坡、英国、美国等十多个国家的路线，有专业领队老师带队，需要我把详细资料发您看下嘛？"
+                ]
+            },
+            {
+                "description": "确认用户孩子年龄。",
+                "scripts": [
+                    "好的，那咱家孩子现在几岁了？"
+                ]
+            },
+            {
+                "description": "确认用户孩子游学地点。",
+                "scripts": [
+                    "那咱们想去哪个国家游学啊，像英国、美国、新加坡等，我们都有对应的路线"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "喂"
+            },
+            {
+                "role": "assistant",
+                "content": "您好，我是EF海外游学的顾问助理，您之前有在抖音给我们留过信息，还有印象吗？"
+            },
+            {
+                "role": "user",
+                "content": "对的对的，前段时间弄的"
+            },
+            {
+                "role": "assistant",
+                "content": "来电是看到您有想了解孩子的海外冬夏令营，我们有新加坡、英国、美国等十多个国家的路线，有专业领队老师带队，需要我把详细资料发您看下嘛？"
+            },
+            {
+                "role": "user",
+                "content": "那你发我看一下吧"
+            },
+            {
+                "role": "user",
+                "content": "嗯……那咱家孩子现在几岁了？"
+            },
+            {
+                "role": "assistant",
+                "content": "家长可以一起去吗？"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认是否对这个事情有印象",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认用户是否愿意继续了解",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认用户孩子年龄",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务4",
+                    "description": " 确认用户孩子游学地点",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务3"
+        },
+        "table": [
+            {
+                "question": "是否对这个事情有印象",
+                "answer": "",
+                "options": [
+                    "有印象",
+                    "没印象",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "是否愿意继续了解",
+                "answer": "",
+                "options": [
+                    "愿意",
+                    "不愿意",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "孩子年龄",
+                "answer": ""
+            },
+            {
+                "question": "孩子游学地点",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认是否对这个事情有印象）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认用户是否愿意继续了解）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认用户孩子年龄）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认用户孩子游学地点）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是EF海外游学的客服，客户有意向参加海外游学，询问用户孩子的年龄及游学地点，并记录下来。",
+        "task_description": [
+            {
+                "description": "确认是否对这个事情有印象。",
+                "scripts": [
+                    "您好，我是EF海外游学的顾问助理，您之前有在抖音给我们留过信息，还有印象吗？"
+                ]
+            },
+            {
+                "description": "确认用户是否愿意继续了解。",
+                "scripts": [
+                    "来电是看到您有想了解孩子的海外冬夏令营，我们有新加坡、英国、美国等十多个国家的路线，有专业领队老师带队，需要我把详细资料发您看下嘛？"
+                ]
+            },
+            {
+                "description": "确认用户孩子年龄。",
+                "scripts": [
+                    "好的，那咱家孩子现在几岁了？"
+                ]
+            },
+            {
+                "description": "确认用户孩子游学地点。",
+                "scripts": [
+                    "那咱们想去哪个国家游学啊，像英国、美国、新加坡等，我们都有对应的路线"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "喂"
+            },
+            {
+                "role": "assistant",
+                "content": "您好，我是EF海外游学的顾问助理，您之前有在抖音给我们留过信息，还有印象吗？"
+            },
+            {
+                "role": "user",
+                "content": "对的对的，前段时间弄的"
+            },
+            {
+                "role": "assistant",
+                "content": "来电是看到您有想了解孩子的海外冬夏令营，我们有新加坡、英国、美国等十多个国家的路线，有专业领队老师带队，需要我把详细资料发您看下嘛？"
+            },
+            {
+                "role": "user",
+                "content": "那你发我看一下吧"
+            },
+            {
+                "role": "user",
+                "content": "嗯……那咱家孩子现在几岁了？"
+            },
+            {
+                "role": "assistant",
+                "content": "今年12岁了，他还有个哥哥15岁能一起吗"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认是否对这个事情有印象",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认用户是否愿意继续了解",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认用户孩子年龄",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务4",
+                    "description": " 确认用户孩子游学地点",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务4"
+        },
+        "table": [
+            {
+                "question": "是否对这个事情有印象",
+                "answer": "",
+                "options": [
+                    "有印象",
+                    "没印象",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "是否愿意继续了解",
+                "answer": "",
+                "options": [
+                    "愿意",
+                    "不愿意",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "孩子年龄",
+                "answer": ""
+            },
+            {
+                "question": "孩子游学地点",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认是否对这个事情有印象）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认用户是否愿意继续了解）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认用户孩子年龄）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认用户孩子游学地点）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是EF海外游学的客服，客户有意向参加海外游学，询问用户孩子的年龄及游学地点，并记录下来。",
+        "task_description": [
+            {
+                "description": "确认是否对这个事情有印象。",
+                "scripts": [
+                    "您好，我是EF海外游学的顾问助理，您之前有在抖音给我们留过信息，还有印象吗？"
+                ]
+            },
+            {
+                "description": "确认用户是否愿意继续了解。",
+                "scripts": [
+                    "来电是看到您有想了解孩子的海外冬夏令营，我们有新加坡、英国、美国等十多个国家的路线，有专业领队老师带队，需要我把详细资料发您看下嘛？"
+                ]
+            },
+            {
+                "description": "确认用户孩子年龄。",
+                "scripts": [
+                    "好的，那咱家孩子现在几岁了？"
+                ]
+            },
+            {
+                "description": "确认用户孩子游学地点。",
+                "scripts": [
+                    "那咱们想去哪个国家游学啊，像英国、美国、新加坡等，我们都有对应的路线"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "喂"
+            },
+            {
+                "role": "assistant",
+                "content": "您好，我是EF海外游学的顾问助理，您之前有在抖音给我们留过信息，还有印象吗？"
+            },
+            {
+                "role": "user",
+                "content": "对的对的，前段时间弄的"
+            },
+            {
+                "role": "assistant",
+                "content": "来电是看到您有想了解孩子的海外冬夏令营，我们有新加坡、英国、美国等十多个国家的路线，有专业领队老师带队，需要我把详细资料发您看下嘛？"
+            },
+            {
+                "role": "user",
+                "content": "那你发我看一下吧"
+            },
+            {
+                "role": "user",
+                "content": "嗯……那咱家孩子现在几岁了？"
+            },
+            {
+                "role": "assistant",
+                "content": "我们这边考虑去英国，说实话去美国的话有点危险的"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认是否对这个事情有印象",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认用户是否愿意继续了解",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认用户孩子年龄",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务4",
+                    "description": " 确认用户孩子游学地点",
+                    "status": "已完成",
+                    "needs_action": false
+                }
+            ],
+            "next_expected_task": "任务3"
+        },
+        "table": [
+            {
+                "question": "是否对这个事情有印象",
+                "answer": "",
+                "options": [
+                    "有印象",
+                    "没印象",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "是否愿意继续了解",
+                "answer": "",
+                "options": [
+                    "愿意",
+                    "不愿意",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "孩子年龄",
+                "answer": ""
+            },
+            {
+                "question": "孩子游学地点",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认是否对这个事情有印象）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认用户是否愿意继续了解）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认用户孩子年龄）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认用户孩子游学地点）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是霍尼韦尔净水器售后回访的客服，有用户完成了设备安装，你需要跟用户确定是否真正完成安装、是否准时上门等消息，并记录下来。",
+        "task_description": [
+            {
+                "description": "确认是否方便回访。",
+                "scripts": [
+                    "诶~您好，这里是霍尼韦尔净水服务中心，来电想倾听一下您的购后反馈，完成回访即可延长质保三个月，耽误您1分钟时间可以吗"
+                ]
+            },
+            {
+                "description": "确认净水器是否安装完成。",
+                "scripts": [
+                    "就是想问下您的净水产品现在已经安装完成了吗？"
+                ]
+            },
+            {
+                "description": "确认安装师傅是否准时。",
+                "scripts": [
+                    "咱们师傅是按预约的时间上门的吧？"
+                ]
+            },
+            {
+                "description": "确认安装师傅态度如何。",
+                "scripts": [
+                    "请问您对这次师傅安装服务是否满意呢？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "喂"
+            },
+            {
+                "role": "assistant",
+                "content": "诶~您好，这里是霍尼韦尔净水服务中心，来电想倾听一下您的购后反馈，完成回访即可延长质保三个月，耽误您1分钟时间可以吗"
+            },
+            {
+                "role": "user",
+                "content": "可以的"
+            },
+            {
+                "role": "assistant",
+                "content": "就是想问下您的净水产品现在已经安装完成了吗？"
+            },
+            {
+                "role": "user",
+                "content": "已经安装完了"
+            },
+            {
+                "role": "assistant",
+                "content": "嗯嗯，咱们师傅是按预约的时间上门的吧？"
+            },
+            {
+                "role": "user",
+                "content": "你们还有其他产品有做活动吗"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认是否方便回访",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认净水器是否安装完成",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认安装师傅是否准时",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务4",
+                    "description": "确认安装师傅态度如何",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务3"
+        },
+        "table": [
+            {
+                "question": "是否方便回访",
+                "answer": "",
+                "options": [
+                    "方便",
+                    "不方便",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "净水器是否安装完成",
+                "answer": ""
+            },
+            {
+                "question": "安装师傅是否准时",
+                "answer": ""
+            },
+            {
+                "question": "安装师傅态度如何",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认是否方便回访）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认净水器是否安装完成）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认安装师傅是否准时）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认安装师傅态度如何）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是霍尼韦尔净水器售后回访的客服，有用户完成了设备安装，你需要跟用户确定是否真正完成安装、是否准时上门等消息，并记录下来。",
+        "task_description": [
+            {
+                "description": "确认是否方便回访。",
+                "scripts": [
+                    "诶~您好，这里是霍尼韦尔净水服务中心，来电想倾听一下您的购后反馈，完成回访即可延长质保三个月，耽误您1分钟时间可以吗"
+                ]
+            },
+            {
+                "description": "确认净水器是否安装完成。",
+                "scripts": [
+                    "就是想问下您的净水产品现在已经安装完成了吗？"
+                ]
+            },
+            {
+                "description": "确认安装师傅是否准时。",
+                "scripts": [
+                    "咱们师傅是按预约的时间上门的吧？"
+                ]
+            },
+            {
+                "description": "确认安装师傅态度如何。",
+                "scripts": [
+                    "请问您对这次师傅安装服务是否满意呢？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "喂"
+            },
+            {
+                "role": "assistant",
+                "content": "诶~您好，这里是霍尼韦尔净水服务中心，来电想倾听一下您的购后反馈，完成回访即可延长质保三个月，耽误您1分钟时间可以吗"
+            },
+            {
+                "role": "user",
+                "content": "可以的"
+            },
+            {
+                "role": "assistant",
+                "content": "就是想问下您的净水产品现在已经安装完成了吗？"
+            },
+            {
+                "role": "user",
+                "content": "已经安装完了"
+            },
+            {
+                "role": "assistant",
+                "content": "嗯嗯，咱们师傅是按预约的时间上门的吧？"
+            },
+            {
+                "role": "user",
+                "content": "你们师傅倒是准时到了，倒是我有事出门了一趟没准时到家，"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认是否方便回访",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认净水器是否安装完成",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认安装师傅是否准时",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务4",
+                    "description": "确认安装师傅态度如何",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务4"
+        },
+        "table": [
+            {
+                "question": "是否方便回访",
+                "answer": "",
+                "options": [
+                    "方便",
+                    "不方便",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "净水器是否安装完成",
+                "answer": ""
+            },
+            {
+                "question": "安装师傅是否准时",
+                "answer": ""
+            },
+            {
+                "question": "安装师傅态度如何",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认是否方便回访）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认净水器是否安装完成）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认安装师傅是否准时）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认安装师傅态度如何）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是霍尼韦尔净水器售后回访的客服，有用户完成了设备安装，你需要跟用户确定是否真正完成安装、是否准时上门等消息，并记录下来。",
+        "task_description": [
+            {
+                "description": "确认是否方便回访。",
+                "scripts": [
+                    "诶~您好，这里是霍尼韦尔净水服务中心，来电想倾听一下您的购后反馈，完成回访即可延长质保三个月，耽误您1分钟时间可以吗"
+                ]
+            },
+            {
+                "description": "确认净水器是否安装完成。",
+                "scripts": [
+                    "就是想问下您的净水产品现在已经安装完成了吗？"
+                ]
+            },
+            {
+                "description": "确认安装师傅是否准时。",
+                "scripts": [
+                    "咱们师傅是按预约的时间上门的吧？"
+                ]
+            },
+            {
+                "description": "确认安装师傅态度如何。",
+                "scripts": [
+                    "请问您对这次师傅安装服务是否满意呢？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "喂"
+            },
+            {
+                "role": "assistant",
+                "content": "诶~您好，这里是霍尼韦尔净水服务中心，来电想倾听一下您的购后反馈，完成回访即可延长质保三个月，耽误您1分钟时间可以吗"
+            },
+            {
+                "role": "user",
+                "content": "可以的"
+            },
+            {
+                "role": "assistant",
+                "content": "就是想问下您的净水产品现在已经安装完成了吗？"
+            },
+            {
+                "role": "user",
+                "content": "已经安装完了"
+            },
+            {
+                "role": "assistant",
+                "content": "嗯嗯，咱们师傅是按预约的时间上门的吧？"
+            },
+            {
+                "role": "user",
+                "content": "我之前还买了其他的东西，什么时候能送上门？"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认是否方便回访",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认净水器是否安装完成",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认安装师傅是否准时",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务4",
+                    "description": "确认安装师傅态度如何",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务3"
+        },
+        "table": [
+            {
+                "question": "是否方便回访",
+                "answer": "",
+                "options": [
+                    "方便",
+                    "不方便",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "净水器是否安装完成",
+                "answer": ""
+            },
+            {
+                "question": "安装师傅是否准时",
+                "answer": ""
+            },
+            {
+                "question": "安装师傅态度如何",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认是否方便回访）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认净水器是否安装完成）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认安装师傅是否准时）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认安装师傅态度如何）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是霍尼韦尔净水器售后回访的客服，有用户完成了设备安装，你需要跟用户确定是否真正完成安装、是否准时上门等消息，并记录下来。",
+        "task_description": [
+            {
+                "description": "确认是否方便回访。",
+                "scripts": [
+                    "诶~您好，这里是霍尼韦尔净水服务中心，来电想倾听一下您的购后反馈，完成回访即可延长质保三个月，耽误您1分钟时间可以吗"
+                ]
+            },
+            {
+                "description": "确认净水器是否安装完成。",
+                "scripts": [
+                    "就是想问下您的净水产品现在已经安装完成了吗？"
+                ]
+            },
+            {
+                "description": "确认安装师傅是否准时。",
+                "scripts": [
+                    "咱们师傅是按预约的时间上门的吧？"
+                ]
+            },
+            {
+                "description": "确认安装师傅态度如何。",
+                "scripts": [
+                    "请问您对这次师傅安装服务是否满意呢？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "喂"
+            },
+            {
+                "role": "assistant",
+                "content": "诶~您好，这里是霍尼韦尔净水服务中心，来电想倾听一下您的购后反馈，完成回访即可延长质保三个月，耽误您1分钟时间可以吗"
+            },
+            {
+                "role": "user",
+                "content": "可以的"
+            },
+            {
+                "role": "assistant",
+                "content": "就是想问下您的净水产品现在已经安装完成了吗？"
+            },
+            {
+                "role": "user",
+                "content": "已经安装完了"
+            },
+            {
+                "role": "assistant",
+                "content": "嗯嗯，咱们师傅是按预约的时间上门的吧？"
+            },
+            {
+                "role": "user",
+                "content": "之前那个服务态度那么差，你们这次这个师傅态度挺好的嘛"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认是否方便回访",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认净水器是否安装完成",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认安装师傅是否准时",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务4",
+                    "description": "确认安装师傅态度如何",
+                    "status": "已完成",
+                    "needs_action": false
+                }
+            ],
+            "next_expected_task": "任务3"
+        },
+        "table": [
+            {
+                "question": "是否方便回访",
+                "answer": "",
+                "options": [
+                    "方便",
+                    "不方便",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "净水器是否安装完成",
+                "answer": ""
+            },
+            {
+                "question": "安装师傅是否准时",
+                "answer": ""
+            },
+            {
+                "question": "安装师傅态度如何",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认是否方便回访）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认净水器是否安装完成）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认安装师傅是否准时）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认安装师傅态度如何）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是霍尼韦尔净水器售后回访的客服，有用户完成了设备安装，你需要跟用户确定是否真正完成安装、是否准时上门等消息，并记录下来。",
+        "task_description": [
+            {
+                "description": "确认是否方便回访。",
+                "scripts": [
+                    "诶~您好，这里是霍尼韦尔净水服务中心，来电想倾听一下您的购后反馈，完成回访即可延长质保三个月，耽误您1分钟时间可以吗"
+                ]
+            },
+            {
+                "description": "确认净水器是否安装完成。",
+                "scripts": [
+                    "就是想问下您的净水产品现在已经安装完成了吗？"
+                ]
+            },
+            {
+                "description": "确认安装师傅是否准时。",
+                "scripts": [
+                    "咱们师傅是按预约的时间上门的吧？"
+                ]
+            },
+            {
+                "description": "确认安装师傅态度如何。",
+                "scripts": [
+                    "请问您对这次师傅安装服务是否满意呢？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "喂"
+            },
+            {
+                "role": "assistant",
+                "content": "诶~您好，这里是霍尼韦尔净水服务中心，来电想倾听一下您的购后反馈，完成回访即可延长质保三个月，耽误您1分钟时间可以吗"
+            },
+            {
+                "role": "user",
+                "content": "可以的"
+            },
+            {
+                "role": "assistant",
+                "content": "就是想问下您的净水产品现在已经安装完成了吗？"
+            },
+            {
+                "role": "user",
+                "content": "已经安装完了"
+            },
+            {
+                "role": "assistant",
+                "content": "嗯嗯，咱们师傅是按预约的时间上门的吧？"
+            },
+            {
+                "role": "user",
+                "content": "是准时来的，态度也挺不错的"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认是否方便回访",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认净水器是否安装完成",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认安装师傅是否准时",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务4",
+                    "description": "确认安装师傅态度如何",
+                    "status": "已完成",
+                    "needs_action": false
+                }
+            ],
+            "next_expected_task": null
+        },
+        "table": [
+            {
+                "question": "是否方便回访",
+                "answer": "",
+                "options": [
+                    "方便",
+                    "不方便",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "净水器是否安装完成",
+                "answer": ""
+            },
+            {
+                "question": "安装师傅是否准时",
+                "answer": ""
+            },
+            {
+                "question": "安装师傅态度如何",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认是否方便回访）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认净水器是否安装完成）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认安装师傅是否准时）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认安装师傅态度如何）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是鲁班柜台客服中心的回访专员，有用户在店铺买了药店柜台安装，你需要跟用户确认相关信息，并记录下来。",
+        "task_description": [
+            {
+                "description": "用户是否愿意进行回访。",
+                "scripts": [
+                    "诶您好，我是药店鲁班客服中心的回访专员，看咱们药店柜台安装好有段时间了，跟您做个简单回访，您看方便吗？"
+                ]
+            },
+            {
+                "description": "确认产品是否满意。",
+                "scripts": [
+                    "首先，您使用下来，感觉我们的产品质量、实用效果等都满意吗？"
+                ]
+            },
+            {
+                "description": "确认业务人员是否满意。",
+                "scripts": [
+                    "诶，了解，那和您对接的业务经理，从专业度、服务态度等方面，请问您是否满意呢？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "你好"
+            },
+            {
+                "role": "assistant",
+                "content": "诶您好，我是药店鲁班客服中心的回访专员，看咱们药店柜台安装好有段时间了，跟您做个简单回访，您看方便吗？"
+            },
+            {
+                "role": "user",
+                "content": "现在还算方便"
+            },
+            {
+                "role": "assistant",
+                "content": "首先，您使用下来，感觉我们的产品质量、实用效果等都满意吗？"
+            },
+            {
+                "role": "user",
+                "content": "你们发给我的感觉是瑕疵品，我又向对接的那个人申请换了个，他人到挺好的"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "用户是否愿意进行回访",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认产品是否满意",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认业务人员是否满意",
+                    "status": "已完成",
+                    "needs_action": false
+                }
+            ],
+            "next_expected_task": null
+        },
+        "table": [
+            {
+                "question": "用户是否愿意进行回访",
+                "answer": "",
+                "options": [
+                    "愿意",
+                    "不愿意",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "产品是否满意",
+                "answer": ""
+            },
+            {
+                "question": "业务人员是否满意",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（用户是否愿意进行回访）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认产品是否满意）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认业务人员是否满意）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是鲁班柜台客服中心的回访专员，有用户在店铺买了药店柜台安装，你需要跟用户确认相关信息，并记录下来。",
+        "task_description": [
+            {
+                "description": "用户是否愿意进行回访。",
+                "scripts": [
+                    "诶您好，我是药店鲁班客服中心的回访专员，看咱们药店柜台安装好有段时间了，跟您做个简单回访，您看方便吗？"
+                ]
+            },
+            {
+                "description": "确认产品是否满意。",
+                "scripts": [
+                    "首先，您使用下来，感觉我们的产品质量、实用效果等都满意吗？"
+                ]
+            },
+            {
+                "description": "确认业务人员是否满意。",
+                "scripts": [
+                    "诶，了解，那和您对接的业务经理，从专业度、服务态度等方面，请问您是否满意呢？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "你好"
+            },
+            {
+                "role": "assistant",
+                "content": "诶您好，我是药店鲁班客服中心的回访专员，看咱们药店柜台安装好有段时间了，跟您做个简单回访，您看方便吗？"
+            },
+            {
+                "role": "user",
+                "content": "现在还算方便"
+            },
+            {
+                "role": "assistant",
+                "content": "首先，您使用下来，感觉我们的产品质量、实用效果等都满意吗？"
+            },
+            {
+                "role": "user",
+                "content": "你们产品质量挺好的呀，对接的那个人服务也挺好的挺有耐心"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "用户是否愿意进行回访",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认产品是否满意",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认业务人员是否满意",
+                    "status": "已完成",
+                    "needs_action": false
+                }
+            ],
+            "next_expected_task": null
+        },
+        "table": [
+            {
+                "question": "用户是否愿意进行回访",
+                "answer": "",
+                "options": [
+                    "愿意",
+                    "不愿意",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "产品是否满意",
+                "answer": ""
+            },
+            {
+                "question": "业务人员是否满意",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（用户是否愿意进行回访）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认产品是否满意）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认业务人员是否满意）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是鲁班柜台客服中心的回访专员，有用户在店铺买了药店柜台安装，你需要跟用户确认相关信息，并记录下来。",
+        "task_description": [
+            {
+                "description": "用户是否愿意进行回访。",
+                "scripts": [
+                    "诶您好，我是药店鲁班客服中心的回访专员，看咱们药店柜台安装好有段时间了，跟您做个简单回访，您看方便吗？"
+                ]
+            },
+            {
+                "description": "确认产品是否满意。",
+                "scripts": [
+                    "首先，您使用下来，感觉我们的产品质量、实用效果等都满意吗？"
+                ]
+            },
+            {
+                "description": "确认业务人员是否满意。",
+                "scripts": [
+                    "诶，了解，那和您对接的业务经理，从专业度、服务态度等方面，请问您是否满意呢？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "您好您好"
+            },
+            {
+                "role": "assistant",
+                "content": "诶您好，我是药店鲁班客服中心的回访专员，看咱们药店柜台安装好有段时间了，跟您做个简单回访，您看方便吗？"
+            },
+            {
+                "role": "user",
+                "content": "你说吧"
+            },
+            {
+                "role": "assistant",
+                "content": "首先，您使用下来，感觉我们的产品质量、实用效果等都满意吗？"
+            },
+            {
+                "role": "user",
+                "content": "还挺满意的，你能不能加我微信聊这个？"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "用户是否愿意进行回访",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认产品是否满意",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认业务人员是否满意",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务3"
+        },
+        "table": [
+            {
+                "question": "用户是否愿意进行回访",
+                "answer": "",
+                "options": [
+                    "愿意",
+                    "不愿意",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "产品是否满意",
+                "answer": ""
+            },
+            {
+                "question": "业务人员是否满意",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（用户是否愿意进行回访）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认产品是否满意）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认业务人员是否满意）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是鲁班柜台客服中心的回访专员，有用户在店铺买了药店柜台安装，你需要跟用户确认相关信息，并记录下来。",
+        "task_description": [
+            {
+                "description": "用户是否愿意进行回访。",
+                "scripts": [
+                    "诶您好，我是药店鲁班客服中心的回访专员，看咱们药店柜台安装好有段时间了，跟您做个简单回访，您看方便吗？"
+                ]
+            },
+            {
+                "description": "确认产品是否满意。",
+                "scripts": [
+                    "首先，您使用下来，感觉我们的产品质量、实用效果等都满意吗？"
+                ]
+            },
+            {
+                "description": "确认业务人员是否满意。",
+                "scripts": [
+                    "诶，了解，那和您对接的业务经理，从专业度、服务态度等方面，请问您是否满意呢？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "喂喂喂"
+            },
+            {
+                "role": "assistant",
+                "content": "诶您好，我是药店鲁班客服中心的回访专员，看咱们药店柜台安装好有段时间了，跟您做个简单回访，您看方便吗？"
+            },
+            {
+                "role": "user",
+                "content": "方便"
+            },
+            {
+                "role": "assistant",
+                "content": "首先，您使用下来，感觉我们的产品质量、实用效果等都满意吗？"
+            },
+            {
+                "role": "user",
+                "content": "满意，你们回访要多久啊？"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "用户是否愿意进行回访",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认产品是否满意",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认业务人员是否满意",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务3"
+        },
+        "table": [
+            {
+                "question": "用户是否愿意进行回访",
+                "answer": "",
+                "options": [
+                    "愿意",
+                    "不愿意",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "产品是否满意",
+                "answer": ""
+            },
+            {
+                "question": "业务人员是否满意",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（用户是否愿意进行回访）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认产品是否满意）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认业务人员是否满意）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是鲁班柜台客服中心的回访专员，有用户在店铺买了药店柜台安装，你需要跟用户确认相关信息，并记录下来。",
+        "task_description": [
+            {
+                "description": "用户是否愿意进行回访。",
+                "scripts": [
+                    "诶您好，我是药店鲁班客服中心的回访专员，看咱们药店柜台安装好有段时间了，跟您做个简单回访，您看方便吗？"
+                ]
+            },
+            {
+                "description": "确认产品是否满意。",
+                "scripts": [
+                    "首先，您使用下来，感觉我们的产品质量、实用效果等都满意吗？"
+                ]
+            },
+            {
+                "description": "确认业务人员是否满意。",
+                "scripts": [
+                    "诶，了解，那和您对接的业务经理，从专业度、服务态度等方面，请问您是否满意呢？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "您好"
+            },
+            {
+                "role": "assistant",
+                "content": "诶您好，我是药店鲁班客服中心的回访专员，看咱们药店柜台安装好有段时间了，跟您做个简单回访，您看方便吗？"
+            },
+            {
+                "role": "user",
+                "content": "你就直接说吧"
+            },
+            {
+                "role": "assistant",
+                "content": "首先，您使用下来，感觉我们的产品质量、实用效果等都满意吗？"
+            },
+            {
+                "role": "user",
+                "content": "东西挺好用的"
+            },
+            {
+                "role": "assistant",
+                "content": "诶，了解，那和您对接的业务经理，从专业度、服务态度等方面，请问您是否满意呢？"
+            },
+            {
+                "role": "user",
+                "content": "这人每次回消息都特别慢，每次问业务相关的都说不晓得"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "用户是否愿意进行回访",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认产品是否满意",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认业务人员是否满意",
+                    "status": "已完成",
+                    "needs_action": false
+                }
+            ],
+            "next_expected_task": null
+        },
+        "table": [
+            {
+                "question": "用户是否愿意进行回访",
+                "answer": "",
+                "options": [
+                    "愿意",
+                    "不愿意",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "产品是否满意",
+                "answer": ""
+            },
+            {
+                "question": "业务人员是否满意",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（用户是否愿意进行回访）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认产品是否满意）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认业务人员是否满意）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是杭州我爱我家的客服，客户有意向租房，跟客户确认相关信息，并记录下来。",
+        "task_description": [
+            {
+                "description": "确认是否考虑租房。",
+                "scripts": [
+                    "您好！我是杭州我爱我家的。最近杭州房租和往年比降了很多，在我们这边租房长短租都行还不收中介费，性价比非常高，方便问下您近期有租房需求嘛?"
+                ]
+            },
+            {
+                "description": "确认具体区域。",
+                "scripts": [
+                    "好的，请问您目前考虑杭州哪个区的房子呢，这边登记下"
+                ]
+            },
+            {
+                "description": "确认具体地铁站或商圈附近。",
+                "scripts": [
+                    "嗯，那您主要考虑的是哪个地铁站附近或者商圈附近的房子呢？"
+                ]
+            },
+            {
+                "description": "确认具体租房预算。",
+                "scripts": [
+                    "方便问下您的租房预算大概是多少呢？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "你好你好"
+            },
+            {
+                "role": "assistant",
+                "content": "您好！我是杭州我爱我家的。最近咱们我爱我家的房租比去年降了很多，平均有将近1000元的降幅，在这边租房长短租都行，还不收中介费，性价比非常高，想了解一下您最近有租房需求吗？"
+            },
+            {
+                "role": "user",
+                "content": "是的，目前考虑一千左右的房子，毕竟没什么钱。"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认是否考虑租房",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认具体区域",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认具体地铁站或商圈附近",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务4",
+                    "description": "确认具体租房预算",
+                    "status": "已完成",
+                    "needs_action": false
+                }
+            ],
+            "next_expected_task": "任务2"
+        },
+        "table": [
+            {
+                "question": "是否考虑租房",
+                "answer": "",
+                "options": [
+                    "考虑",
+                    "不考虑",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "具体区域（精确到区）",
+                "answer": ""
+            },
+            {
+                "question": "具体地铁站或商圈附近",
+                "answer": ""
+            },
+            {
+                "question": "具体租房预算",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认是否考虑租房）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认具体区域）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认具体地铁站或商圈附近）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认具体租房预算）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是杭州我爱我家的客服，客户有意向租房，跟客户确认相关信息，并记录下来。",
+        "task_description": [
+            {
+                "description": "确认是否考虑租房。",
+                "scripts": [
+                    "您好！我是杭州我爱我家的。最近杭州房租和往年比降了很多，在我们这边租房长短租都行还不收中介费，性价比非常高，方便问下您近期有租房需求嘛?"
+                ]
+            },
+            {
+                "description": "确认具体区域。",
+                "scripts": [
+                    "好的，请问您目前考虑杭州哪个区的房子呢，这边登记下"
+                ]
+            },
+            {
+                "description": "确认具体地铁站或商圈附近。",
+                "scripts": [
+                    "嗯，那您主要考虑的是哪个地铁站附近或者商圈附近的房子呢？"
+                ]
+            },
+            {
+                "description": "确认具体租房预算。",
+                "scripts": [
+                    "方便问下您的租房预算大概是多少呢？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "你好你好"
+            },
+            {
+                "role": "assistant",
+                "content": "您好！我是杭州我爱我家的。最近咱们我爱我家的房租比去年降了很多，平均有将近1000元的降幅，在这边租房长短租都行，还不收中介费，性价比非常高，想了解一下您最近有租房需求吗？"
+            },
+            {
+                "role": "user",
+                "content": "是的，我打算在余杭区靠近五常地铁站"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认是否考虑租房",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认具体区域",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认具体地铁站或商圈附近",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务4",
+                    "description": "确认具体租房预算",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务4"
+        },
+        "table": [
+            {
+                "question": "是否考虑租房",
+                "answer": "",
+                "options": [
+                    "考虑",
+                    "不考虑",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "具体区域（精确到区）",
+                "answer": ""
+            },
+            {
+                "question": "具体地铁站或商圈附近",
+                "answer": ""
+            },
+            {
+                "question": "具体租房预算",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认是否考虑租房）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认具体区域）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认具体地铁站或商圈附近）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认具体租房预算）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是杭州我爱我家的客服，客户有意向租房，跟客户确认相关信息，并记录下来。",
+        "task_description": [
+            {
+                "description": "确认是否考虑租房。",
+                "scripts": [
+                    "您好！我是杭州我爱我家的。最近杭州房租和往年比降了很多，在我们这边租房长短租都行还不收中介费，性价比非常高，方便问下您近期有租房需求嘛?"
+                ]
+            },
+            {
+                "description": "确认具体区域。",
+                "scripts": [
+                    "好的，请问您目前考虑杭州哪个区的房子呢，这边登记下"
+                ]
+            },
+            {
+                "description": "确认具体地铁站或商圈附近。",
+                "scripts": [
+                    "嗯，那您主要考虑的是哪个地铁站附近或者商圈附近的房子呢？"
+                ]
+            },
+            {
+                "description": "确认具体租房预算。",
+                "scripts": [
+                    "方便问下您的租房预算大概是多少呢？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "你好你好"
+            },
+            {
+                "role": "assistant",
+                "content": "您好！我是杭州我爱我家的。最近咱们我爱我家的房租比去年降了很多，平均有将近1000元的降幅，在这边租房长短租都行，还不收中介费，性价比非常高，想了解一下您最近有租房需求吗？"
+            },
+            {
+                "role": "user",
+                "content": "是的，你们奥体中心附近的房子可以办居住证吗"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认是否考虑租房",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认具体区域",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认具体地铁站或商圈附近",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务4",
+                    "description": "确认具体租房预算",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务2"
+        },
+        "table": [
+            {
+                "question": "是否考虑租房",
+                "answer": "",
+                "options": [
+                    "考虑",
+                    "不考虑",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "具体区域（精确到区）",
+                "answer": ""
+            },
+            {
+                "question": "具体地铁站或商圈附近",
+                "answer": ""
+            },
+            {
+                "question": "具体租房预算",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认是否考虑租房）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认具体区域）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认具体地铁站或商圈附近）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认具体租房预算）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是杭州我爱我家的客服，客户有意向租房，跟客户确认相关信息，并记录下来。",
+        "task_description": [
+            {
+                "description": "确认是否考虑租房。",
+                "scripts": [
+                    "您好！我是杭州我爱我家的。最近杭州房租和往年比降了很多，在我们这边租房长短租都行还不收中介费，性价比非常高，方便问下您近期有租房需求嘛?"
+                ]
+            },
+            {
+                "description": "确认具体区域。",
+                "scripts": [
+                    "好的，请问您目前考虑杭州哪个区的房子呢，这边登记下"
+                ]
+            },
+            {
+                "description": "确认具体地铁站或商圈附近。",
+                "scripts": [
+                    "嗯，那您主要考虑的是哪个地铁站附近或者商圈附近的房子呢？"
+                ]
+            },
+            {
+                "description": "确认具体租房预算。",
+                "scripts": [
+                    "方便问下您的租房预算大概是多少呢？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "你好你好"
+            },
+            {
+                "role": "assistant",
+                "content": "您好！我是杭州我爱我家的。最近咱们我爱我家的房租比去年降了很多，平均有将近1000元的降幅，在这边租房长短租都行，还不收中介费，性价比非常高，想了解一下您最近有租房需求吗？"
+            },
+            {
+                "role": "user",
+                "content": "你们余杭有哪些朝南的房子，位置不错的话我考虑下"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认是否考虑租房",
+                    "status": "已完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认具体区域",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认具体地铁站或商圈附近",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务4",
+                    "description": "确认具体租房预算",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务3"
+        },
+        "table": [
+            {
+                "question": "是否考虑租房",
+                "answer": "",
+                "options": [
+                    "考虑",
+                    "不考虑",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "具体区域（精确到区）",
+                "answer": ""
+            },
+            {
+                "question": "具体地铁站或商圈附近",
+                "answer": ""
+            },
+            {
+                "question": "具体租房预算",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认是否考虑租房）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认具体区域）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认具体地铁站或商圈附近）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认具体租房预算）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是杭州我爱我家的客服，客户有意向租房，跟客户确认相关信息，并记录下来。",
+        "task_description": [
+            {
+                "description": "确认是否考虑租房。",
+                "scripts": [
+                    "您好！我是杭州我爱我家的。最近杭州房租和往年比降了很多，在我们这边租房长短租都行还不收中介费，性价比非常高，方便问下您近期有租房需求嘛?"
+                ]
+            },
+            {
+                "description": "确认具体区域。",
+                "scripts": [
+                    "好的，请问您目前考虑杭州哪个区的房子呢，这边登记下"
+                ]
+            },
+            {
+                "description": "确认具体地铁站或商圈附近。",
+                "scripts": [
+                    "嗯，那您主要考虑的是哪个地铁站附近或者商圈附近的房子呢？"
+                ]
+            },
+            {
+                "description": "确认具体租房预算。",
+                "scripts": [
+                    "方便问下您的租房预算大概是多少呢？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "你好你好"
+            },
+            {
+                "role": "assistant",
+                "content": "您好！我是杭州我爱我家的。最近咱们我爱我家的房租比去年降了很多，平均有将近1000元的降幅，在这边租房长短租都行，还不收中介费，性价比非常高，想了解一下您最近有租房需求吗？"
+            },
+            {
+                "role": "user",
+                "content": "对的，想搬到余杭，最好在1200左右的"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认是否考虑租房",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认具体区域",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认具体地铁站或商圈附近",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务4",
+                    "description": "确认具体租房预算",
+                    "status": "已完成",
+                    "needs_action": false
+                }
+            ],
+            "next_expected_task": "任务3"
+        },
+        "table": [
+            {
+                "question": "是否考虑租房",
+                "answer": "",
+                "options": [
+                    "考虑",
+                    "不考虑",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "具体区域（精确到区）",
+                "answer": ""
+            },
+            {
+                "question": "具体地铁站或商圈附近",
+                "answer": ""
+            },
+            {
+                "question": "具体租房预算",
+                "answer": ""
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认是否考虑租房）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认具体区域）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认具体地铁站或商圈附近）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认具体租房预算）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是天使宝贝幼儿机构的招生客服，有客户在网上浏览了你家官网，你需要致电客户确认报课意向及相关信息。",
+        "task_description": [
+            {
+                "description": "确认是否有给孩子报课需求。",
+                "scripts": [
+                    "诶您好，我这边是天使宝贝幼儿机构的招生客服，您之前有在网站上浏览过我们的课程，请问您目前是否想给咱们孩子报课呀？"
+                ]
+            },
+            {
+                "description": "确认孩子年龄。",
+                "scripts": [
+                    "好的，那请问咱们宝贝现在多大了呀？"
+                ]
+            },
+            {
+                "description": " 确认孩子性别。",
+                "scripts": [
+                    "咱们家宝贝是小帅哥还是小美女呀，不同性别的宝宝在兴趣方面可能会有些小差异，有助于我们给孩子选合适课程哦。"
+                ]
+            },
+            {
+                "description": "确认孩子是否有学习经历。",
+                "scripts": [
+                    "想问问您呀，咱家孩子之前有没有参加过一些幼儿兴趣班或者早教课程之类的呀，了解这个能帮我们看看孩子适合从什么阶段的课程开始学起呢。"
+                ]
+            },
+            {
+                "description": "确认可排课时间。",
+                "scripts": [
+                    "了解了，那您和孩子一般是周末时间比较方便上课呀，还是平时课余时间也能安排课程呢？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "喂喂"
+            },
+            {
+                "role": "assistant",
+                "content": "诶您好，我这边是天使宝贝幼儿机构的招生客服，您之前有在网站上浏览过我们的课程，请问您目前是否想给咱们孩子报课呀?"
+            },
+            {
+                "role": "user",
+                "content": "对啊对啊"
+            },
+            {
+                "role": "assistant",
+                "content": "好的，那请问咱们宝贝现在多大了呀？"
+            },
+            {
+                "role": "user",
+                "content": "我两个小孩，大的已经16岁不用报课外课了，现在就是想给小的7岁的女孩子报个才艺类的课"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认是否有给孩子报课需求",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认孩子年龄",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认孩子性别",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务4",
+                    "description": "确认孩子是否有学习经历",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务5",
+                    "description": "确认可排课时间",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务4"
+        },
+        "table": [
+            {
+                "question": "是否有给孩子报课需求",
+                "answer": "",
+                "options": [
+                    "有需求",
+                    "没需求",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "孩子年龄",
+                "answer": ""
+            },
+            {
+                "question": "孩子性别",
+                "answer": ""
+            },
+            {
+                "question": "孩子是否有学习经历",
+                "answer": ""
+            },
+            {
+                "question": "可排课时间",
+                "answer": "",
+                "options": [
+                    "周末",
+                    "平时课余时间",
+                    "其他"
+                ]
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认是否有给孩子报课需求）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认孩子年龄）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认孩子性别）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认孩子是否有学习经历）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务5（确认可排课时间）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是天使宝贝幼儿机构的招生客服，有客户在网上浏览了你家官网，你需要致电客户确认报课意向及相关信息。",
+        "task_description": [
+            {
+                "description": "确认是否有给孩子报课需求。",
+                "scripts": [
+                    "诶您好，我这边是天使宝贝幼儿机构的招生客服，您之前有在网站上浏览过我们的课程，请问您目前是否想给咱们孩子报课呀？"
+                ]
+            },
+            {
+                "description": "确认孩子年龄。",
+                "scripts": [
+                    "好的，那请问咱们宝贝现在多大了呀？"
+                ]
+            },
+            {
+                "description": " 确认孩子性别。",
+                "scripts": [
+                    "咱们家宝贝是小帅哥还是小美女呀，不同性别的宝宝在兴趣方面可能会有些小差异，有助于我们给孩子选合适课程哦。"
+                ]
+            },
+            {
+                "description": "确认孩子是否有学习经历。",
+                "scripts": [
+                    "想问问您呀，咱家孩子之前有没有参加过一些幼儿兴趣班或者早教课程之类的呀，了解这个能帮我们看看孩子适合从什么阶段的课程开始学起呢。"
+                ]
+            },
+            {
+                "description": "确认可排课时间。",
+                "scripts": [
+                    "了解了，那您和孩子一般是周末时间比较方便上课呀，还是平时课余时间也能安排课程呢？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "啊"
+            },
+            {
+                "role": "assistant",
+                "content": "诶您好，我这边是天使宝贝幼儿机构的招生客服，您之前有在网站上浏览过我们的课程，请问您目前是否想给咱们孩子报课呀?"
+            },
+            {
+                "role": "user",
+                "content": "嗯有这个意向，"
+            },
+            {
+                "role": "assistant",
+                "content": "好的，那请问咱们宝贝现在多大了呀？"
+            },
+            {
+                "role": "user",
+                "content": "是有年龄限制吗？"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认是否有给孩子报课需求",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认孩子年龄",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认孩子性别",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务4",
+                    "description": "确认孩子是否有学习经历",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务5",
+                    "description": "确认可排课时间",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务2"
+        },
+        "table": [
+            {
+                "question": "是否有给孩子报课需求",
+                "answer": "",
+                "options": [
+                    "有需求",
+                    "没需求",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "孩子年龄",
+                "answer": ""
+            },
+            {
+                "question": "孩子性别",
+                "answer": ""
+            },
+            {
+                "question": "孩子是否有学习经历",
+                "answer": ""
+            },
+            {
+                "question": "可排课时间",
+                "answer": "",
+                "options": [
+                    "周末",
+                    "平时课余时间",
+                    "其他"
+                ]
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认是否有给孩子报课需求）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认孩子年龄）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认孩子性别）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认孩子是否有学习经历）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务5（确认可排课时间）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是天使宝贝幼儿机构的招生客服，有客户在网上浏览了你家官网，你需要致电客户确认报课意向及相关信息。",
+        "task_description": [
+            {
+                "description": "确认是否有给孩子报课需求。",
+                "scripts": [
+                    "诶您好，我这边是天使宝贝幼儿机构的招生客服，您之前有在网站上浏览过我们的课程，请问您目前是否想给咱们孩子报课呀？"
+                ]
+            },
+            {
+                "description": "确认孩子年龄。",
+                "scripts": [
+                    "好的，那请问咱们宝贝现在多大了呀？"
+                ]
+            },
+            {
+                "description": " 确认孩子性别。",
+                "scripts": [
+                    "咱们家宝贝是小帅哥还是小美女呀，不同性别的宝宝在兴趣方面可能会有些小差异，有助于我们给孩子选合适课程哦。"
+                ]
+            },
+            {
+                "description": "确认孩子是否有学习经历。",
+                "scripts": [
+                    "想问问您呀，咱家孩子之前有没有参加过一些幼儿兴趣班或者早教课程之类的呀，了解这个能帮我们看看孩子适合从什么阶段的课程开始学起呢。"
+                ]
+            },
+            {
+                "description": "确认可排课时间。",
+                "scripts": [
+                    "了解了，那您和孩子一般是周末时间比较方便上课呀，还是平时课余时间也能安排课程呢？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "啊"
+            },
+            {
+                "role": "assistant",
+                "content": "诶您好，我这边是天使宝贝幼儿机构的招生客服，您之前有在网站上浏览过我们的课程，请问您目前是否想给咱们孩子报课呀?"
+            },
+            {
+                "role": "user",
+                "content": "嗯有这个意向，"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认是否有给孩子报课需求",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认孩子年龄",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认孩子性别",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务4",
+                    "description": "确认孩子是否有学习经历",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务5",
+                    "description": "确认可排课时间",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务2"
+        },
+        "table": [
+            {
+                "question": "是否有给孩子报课需求",
+                "answer": "",
+                "options": [
+                    "有需求",
+                    "没需求",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "孩子年龄",
+                "answer": ""
+            },
+            {
+                "question": "孩子性别",
+                "answer": ""
+            },
+            {
+                "question": "孩子是否有学习经历",
+                "answer": ""
+            },
+            {
+                "question": "可排课时间",
+                "answer": "",
+                "options": [
+                    "周末",
+                    "平时课余时间",
+                    "其他"
+                ]
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认是否有给孩子报课需求）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认孩子年龄）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认孩子性别）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认孩子是否有学习经历）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务5（确认可排课时间）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是天使宝贝幼儿机构的招生客服，有客户在网上浏览了你家官网，你需要致电客户确认报课意向及相关信息。",
+        "task_description": [
+            {
+                "description": "确认是否有给孩子报课需求。",
+                "scripts": [
+                    "诶您好，我这边是天使宝贝幼儿机构的招生客服，您之前有在网站上浏览过我们的课程，请问您目前是否想给咱们孩子报课呀？"
+                ]
+            },
+            {
+                "description": "确认孩子年龄。",
+                "scripts": [
+                    "好的，那请问咱们宝贝现在多大了呀？"
+                ]
+            },
+            {
+                "description": " 确认孩子性别。",
+                "scripts": [
+                    "咱们家宝贝是小帅哥还是小美女呀，不同性别的宝宝在兴趣方面可能会有些小差异，有助于我们给孩子选合适课程哦。"
+                ]
+            },
+            {
+                "description": "确认孩子是否有学习经历。",
+                "scripts": [
+                    "想问问您呀，咱家孩子之前有没有参加过一些幼儿兴趣班或者早教课程之类的呀，了解这个能帮我们看看孩子适合从什么阶段的课程开始学起呢。"
+                ]
+            },
+            {
+                "description": "确认可排课时间。",
+                "scripts": [
+                    "了解了，那您和孩子一般是周末时间比较方便上课呀，还是平时课余时间也能安排课程呢？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "啊"
+            },
+            {
+                "role": "assistant",
+                "content": "诶您好，我这边是天使宝贝幼儿机构的招生客服，您之前有在网站上浏览过我们的课程，请问您目前是否想给咱们孩子报课呀?"
+            },
+            {
+                "role": "user",
+                "content": "是的"
+            },
+            {
+                "role": "assistant",
+                "content": "好的，那请问咱们宝贝现在多大了呀？"
+            },
+            {
+                "role": "user",
+                "content": "你们文化课没有的是吧？"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认是否有给孩子报课需求",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认孩子年龄",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认孩子性别",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务4",
+                    "description": "确认孩子是否有学习经历",
+                    "status": "未完成",
+                    "needs_action": true
+                },
+                {
+                    "id": "任务5",
+                    "description": "确认可排课时间",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务2"
+        },
+        "table": [
+            {
+                "question": "是否有给孩子报课需求",
+                "answer": "",
+                "options": [
+                    "有需求",
+                    "没需求",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "孩子年龄",
+                "answer": ""
+            },
+            {
+                "question": "孩子性别",
+                "answer": ""
+            },
+            {
+                "question": "孩子是否有学习经历",
+                "answer": ""
+            },
+            {
+                "question": "可排课时间",
+                "answer": "",
+                "options": [
+                    "周末",
+                    "平时课余时间",
+                    "其他"
+                ]
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认是否有给孩子报课需求）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认孩子年龄）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认孩子性别）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认孩子是否有学习经历）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务5（确认可排课时间）",
+                "answer": "是/否"
+            }
+        ]
+    },
+    {
+        "role_description": "你是天使宝贝幼儿机构的招生客服，有客户在网上浏览了你家官网，你需要致电客户确认报课意向及相关信息。",
+        "task_description": [
+            {
+                "description": "确认是否有给孩子报课需求。",
+                "scripts": [
+                    "诶您好，我这边是天使宝贝幼儿机构的招生客服，您之前有在网站上浏览过我们的课程，请问您目前是否想给咱们孩子报课呀？"
+                ]
+            },
+            {
+                "description": "确认孩子年龄。",
+                "scripts": [
+                    "好的，那请问咱们宝贝现在多大了呀？"
+                ]
+            },
+            {
+                "description": " 确认孩子性别。",
+                "scripts": [
+                    "咱们家宝贝是小帅哥还是小美女呀，不同性别的宝宝在兴趣方面可能会有些小差异，有助于我们给孩子选合适课程哦。"
+                ]
+            },
+            {
+                "description": "确认孩子是否有学习经历。",
+                "scripts": [
+                    "想问问您呀，咱家孩子之前有没有参加过一些幼儿兴趣班或者早教课程之类的呀，了解这个能帮我们看看孩子适合从什么阶段的课程开始学起呢。"
+                ]
+            },
+            {
+                "description": "确认可排课时间。",
+                "scripts": [
+                    "了解了，那您和孩子一般是周末时间比较方便上课呀，还是平时课余时间也能安排课程呢？"
+                ]
+            }
+        ],
+        "dialogue": [
+            {
+                "role": "user",
+                "content": "啊"
+            },
+            {
+                "role": "assistant",
+                "content": "诶您好，我这边是天使宝贝幼儿机构的招生客服，您之前有在网站上浏览过我们的课程，请问您目前是否想给咱们孩子报课呀?"
+            },
+            {
+                "role": "user",
+                "content": "嗯有这个意向，"
+            },
+            {
+                "role": "assistant",
+                "content": "好的，那请问咱们宝贝现在多大了呀？"
+            },
+            {
+                "role": "user",
+                "content": "3岁了"
+            },
+            {
+                "role": "assistant",
+                "content": "咱们家宝贝是小帅哥还是小美女呀，不同性别的宝宝在兴趣方面可能会有些小差异，有助于我们给孩子选合适课程哦。"
+            },
+            {
+                "role": "user",
+                "content": "我们家是个女娃，之前上过几节舞蹈课她不是很感兴趣，这次想给她换个课体验体验"
+            }
+        ],
+        "label": {
+            "tasks": [
+                {
+                    "id": "任务1",
+                    "description": "确认是否有给孩子报课需求",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务2",
+                    "description": "确认孩子年龄",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务3",
+                    "description": "确认孩子性别",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务4",
+                    "description": "确认孩子是否有学习经历",
+                    "status": "已完成",
+                    "needs_action": false
+                },
+                {
+                    "id": "任务5",
+                    "description": "确认可排课时间",
+                    "status": "未完成",
+                    "needs_action": true
+                }
+            ],
+            "next_expected_task": "任务5"
+        },
+        "table": [
+            {
+                "question": "是否有给孩子报课需求",
+                "answer": "",
+                "options": [
+                    "有需求",
+                    "没需求",
+                    "不确定"
+                ]
+            },
+            {
+                "question": "孩子年龄",
+                "answer": ""
+            },
+            {
+                "question": "孩子性别",
+                "answer": ""
+            },
+            {
+                "question": "孩子是否有学习经历",
+                "answer": ""
+            },
+            {
+                "question": "可排课时间",
+                "answer": "",
+                "options": [
+                    "周末",
+                    "平时课余时间",
+                    "其他"
+                ]
+            },
+            {
+                "question": "是否碰到特殊情况",
+                "answer": "",
+                "options": [
+                    "无特殊情况",
+                    "打错电话",
+                    "用户有负面情绪",
+                    "用户暂时有事",
+                    "用户让直接微信聊",
+                    "其他"
+                ]
+            }
+        ],
+        "status_output": [
+            {
+                "question": "是否还需要进行任务1（确认是否有给孩子报课需求）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务2（确认孩子年龄）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务3（确认孩子性别）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务4（确认孩子是否有学习经历）",
+                "answer": "是/否"
+            },
+            {
+                "question": "是否还需要进行任务5（确认可排课时间）",
+                "answer": "是/否"
+            }
+        ]
+    }
+]

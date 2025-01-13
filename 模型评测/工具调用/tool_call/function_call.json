@@ -1,0 +1,278 @@
+[
+    {
+        "type": "function",
+        "function": {
+            "name": "confirm_follow_up_time",
+            "description": "如果用户表示自己现在不方便打电话，调用这个函数，确认下次回访时间",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "Timing_of_follow_up": {
+                        "description": "下次回访时间",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "Timing_of_follow_up"
+                ]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "non_local_store_query",
+            "description": "如果用户表示自己不在当地，调用这个函数，查看这个地址周围是否有门店",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "city": {
+                        "description": "城市名",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "city"
+                ]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "contact_other_number",
+            "description": "如果客户表示需要联系自己别的号码，调用这个函数，确认客户需要联系的号码是哪一个",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "MobilePhone": {
+                        "description": "手机号码",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "MobilePhone"
+                ]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "product_inventory",
+            "description": "客户想要在指定门店购买特定产品，调用这个函数，查看特定产品在指定门店是否有库存",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "Store": {
+                        "description": "门店名",
+                        "type": "string"
+                    },
+                    "Goods": {
+                        "description": "商品名",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "Store",
+                    "Goods"
+                ]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "wechat_id_query",
+            "description": "如果用户表示没收到微信邀请，调用这个函数，再次发送加微邀请",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "wechat_id": {
+                        "description": "微信号",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "wechat_id"
+                ]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "address_query",
+            "description": "如果用户询问门店地址，调用这个函数，查看这个地址附近的门店地址",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "city": {
+                        "description": "城市名",
+                        "type": "string"
+                    },
+                    "district": {
+                        "description": "区县名",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "city",
+                    "district"
+                ]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "product_query",
+            "description": "如果客户询问某个产品是否参与该活动，调用这个函数，查找该产品是否参与客服推荐的活动。",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "product_name": {
+                        "description": "产品名称",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "product_name"
+                ]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "confirm_other_activity_time",
+            "description": "如果用户表示现在不方便参加活动，能否在其他某个时间参加，调用这个函数，查看此时间下活动是否有效。",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "convenient_time": {
+                        "description": "方便参加活动的时间",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "convenient_time"
+                ]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "after_sales_store_address_confirmation",
+            "description": "如果用户反馈线下门店售后问题，调用这个函数，确定相关门店解决问题。",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "store_address": {
+                        "description": "门店地址",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "store_address"
+                ]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "discount_amount",
+            "description": "如果客户询问商品折扣多少，调用这个函数，查看这个商品可以有多少折扣。",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "commodity": {
+                        "description": "商品",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "commodity"
+                ]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "product_effect",
+            "description": "如果客户询问产品效果怎么样，调用这个函数，查看这个商品功效。",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "commodity": {
+                        "description": "商品",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "commodity"
+                ]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "staff_qualifications",
+            "description": "如果客户询问机构工作人员资质，调用这个函数，查看机构工作人员资质并反馈。",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "staff": {
+                        "description": "工作人员",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "staff"
+                ]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "store_manager",
+            "description": "如果客户表示工作人员态度不好，调用这个函数，查找该门店经理并表示让其联系解决。",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "store_address": {
+                        "description": "门店地址",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "store_address"
+                ]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "customer_other_wechat_id",
+            "description": "如果客户表示手机号不是微信号，调用这个函数，对客户提供的其他微信号发送添加邀请。",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "wechat_id": {
+                        "description": "微信号",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "wechat_id"
+                ]
+            }
+        }
+    }
+]

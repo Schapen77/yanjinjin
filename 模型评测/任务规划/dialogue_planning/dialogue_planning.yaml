@@ -1,0 +1,44 @@
+task: dialogue_planning
+dataset_name: dialogue_planning_dataset
+include: _common.yaml
+dataset_kwargs:
+  data_files:
+    test: /home/yanjinjin/Datasets/规划能力（新）/34+35总数据集.json
+    validation: /home/yanjinjin/Datasets/规划能力（新）/34+35总数据集.json
+description: "请根据对话内容和上下文判断当前对话的进展，继续生成对话，并准确识别已完成的任务和下一个待完成的任务。\n
+此外，模型还需要在特殊情况下（例如打错电话、用户有负面情绪、用户暂时有事等）判断是否提前结束对话。"
+doc_to_text: "
+# 角色
+{{ role_description }}
+
+# 任务
+{% for task in task_description %}
+{{ loop.index }}. {{ task.description }}推荐话术：“{{ task.scripts[0] }}”\n
+{% endfor %}
+
+# 对话信息
+{% for turn in dialogue %}{{ turn.role }}：{{ turn.content }}\n{% endfor %}
+
+# 要求
+1. 根据对话信息，填写信息表格，填写表格前仔细思考一下是否有相关信息。
+2. 根据对话信息和填写的表格内容，判断是否还需要进行各个任务。
+3. 根据对话信息，输出下一个将要进行的任务id。
+4. 根据对话信息，判断是否已经完成所有任务。
+5. 如果碰到特殊情况，需要提前结束任务，即所有任务都不需要再进行，“将要进行的下一个任务id”应为none。
+
+# 格式
+{% for i in range(table|length - 1) %}
+{{ table[i].question }}{% if table[i].options %}（选项：{{ table[i].options | join('、') }}）{% endif %}：\n
+{{ status_output[i].question }}：是/否\n
+{% endfor %}
+{{ table[-1].question }}{% if table[-1].options %}（选项：{{ table[-1].options | join('、') }}）{% endif %}：\n
+
+将要进行的下一个任务id：\n
+是否完成所有任务：\n
+是否提前结束任务：\n
+
+按照所给的格式，更新表格内容并填写对应的信息，如果没有对应信息，就空着。"
+doc_to_target: ""
+process_results: !function utils.process_results
+
+# Thought：在生成结果前，你需要先进行思考，说明判断出“下一个任务id”和“是否还需要进行任务”的原因。\n
